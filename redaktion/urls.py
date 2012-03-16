@@ -4,6 +4,7 @@ from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
+
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'redaktion.views.home', name='home'),
@@ -18,4 +19,7 @@ urlpatterns = patterns('',
      url(r'^published/$', 'redaktion.main.views.published', {'template_name':"home.html"}),
      url(r'^archive/$', 'redaktion.main.views.archive', {'template_name' :"home.html"}),
      url(r'^draft/$', 'redaktion.main.views.draft', {'template_name' :"home.html"}),
+     url(r'^profiles/', include('profiles.urls')),
+     url(r'^accounts/', include('registration.backends.default.urls')),
 )
+

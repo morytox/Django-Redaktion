@@ -47,18 +47,18 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = '/Users/morytox/Documents/workspace/Django-Redaktion/redaktion/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = '/Users/morytox/Documents/workspace/Django-Redaktion/redaktion/static/'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -131,7 +131,30 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'main',
     'werbung',
+    'social_auth',
+    'registration',
+    'profiles',
 )
+
+AUTHENTICATION_BACKENDS = (
+        'social_auth.backends.twitter.TwitterBackend',
+        'social_auth.backends.facebook.FacebookBackend',
+        'social_auth.backends.google.GoogleOAuthBackend',
+        'social_auth.backends.google.GoogleOAuth2Backend',
+        'social_auth.backends.google.GoogleBackend',
+        'social_auth.backends.yahoo.YahooBackend',
+        'social_auth.backends.browserid.BrowserIDBackend',
+        'social_auth.backends.contrib.linkedin.LinkedinBackend',
+        'social_auth.backends.contrib.livejournal.LiveJournalBackend',
+        'social_auth.backends.contrib.orkut.OrkutBackend',
+        'social_auth.backends.contrib.foursquare.FoursquareBackend',
+        'social_auth.backends.contrib.github.GithubBackend',
+        'social_auth.backends.contrib.dropbox.DropboxBackend',
+        'social_auth.backends.contrib.flickr.FlickrBackend',
+        'social_auth.backends.contrib.instagram.InstagramBackend',
+        'social_auth.backends.OpenIDBackend',
+        'django.contrib.auth.backends.ModelBackend',
+    )
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
