@@ -1,0 +1,7 @@
+This Project is a Basic Djangoproject with an implementation of:
+
+Django-registration 
+Django-profiles by 
+Django-socialauth
+
+Also it contains the Template collection Django-registration-default for Django-registration.
