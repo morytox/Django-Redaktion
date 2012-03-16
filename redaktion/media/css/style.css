@@ -1,0 +1,168 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	border: none;
+	font-size: 9pt;
+	font-family: Arial, sans-serif;;
+}
+
+#wrapper{
+position: relative;
+	width: 100%;
+	background-color: #dfdfdf;
+}
+
+#innerwrapper{
+position: relative;
+	margin: 0 auto;
+	width:  100%;
+	background-color: #ffffff;
+}
+
+#header{
+position: relative;
+	height: 100px;
+	background-color: #3b5998;
+	
+}
+
+#leftheader{
+position: relative;
+	width: 50%;
+	float: left;
+
+}
+
+#logo{
+position: relative;
+	width: 100%;
+	height: 50%;
+}
+#logo img{
+	height: 100%;
+}
+
+#filter{
+position: relative;
+	width:  100%;
+	height: 50%;
+}
+
+#filter td, #filter th{
+	padding: 0 5px;
+}
+
+#rightheader{
+position: relative;
+	float: right;
+	width: 50%;
+}
+
+#login{
+position: relative;
+	float: right;
+	width: 100%;
+	height: 50%;
+}
+
+#header a{
+	color: #98a7c6;
+	text-decoration: none;
+}
+
+#login a{
+	margin:0 10px;
+}
+
+#header a:hover, #login a:focus{
+	color: #b7c7e8;	
+}
+#login form{
+	float: right;
+}
+
+#header form input{
+	height: 20px;
+	padding: 0 10px;
+	margin-right: 5px;
+	border: 1px solid #000;
+}
+
+#header form label{
+	color: #ffffff;
+	float: left;
+}
+
+#reg-social{
+position: relative;
+	float: right;
+	width: 100%;
+	height: 50%;
+	
+}
+
+#register{
+	float: left;
+	position: relative;
+	width: 50%;
+	height: 100%;
+	color: #ffffff;
+	display: block;
+}
+div.regtxt{
+	width: 5%;
+	height: 50%;
+	float: right;
+	margin: 2%;
+	}
+	
+div.socialblock{
+	float: right;
+	background-color: #ffffff;
+	margin: 2%;
+	width: 5%;
+	height: 50%;
+}
+
+
+#bodycont{
+	height: 100%;
+	width: 100%;
+}
+#news{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+.newsblock{
+	width: 100%;
+	height: 100%;
+}
+.newstype{
+	width: 30%;
+	height: 150px;
+	background-color: #ffffff;
+	float: left;
+	}
+
+.newscontent{
+	width: 70%;
+	height: 150px;
+	background-color: #ffffff;
+	float: right;
+
+}
+
+#reg-form{
+	width: 50%;
+	height: 100%;
+	background-color: #ffffff;
+	float: right;
+}
+
+.socialblock{
+	background-color: #ffffff;
+	width: 5%;
+	height: 50%;
+	float: left;
+}

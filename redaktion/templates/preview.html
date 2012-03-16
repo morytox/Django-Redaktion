@@ -1,0 +1,140 @@
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+	<div id="innerwrapper">
+		<div id="header">
+			<div id="leftheader">
+				<div id="logo"><img src="FS93Nerds.png" /></div>
+				<div id="filter">
+				<form action="#">
+				<table>
+				<tr>
+					<th>
+						<label for="journalist">Journalist</label>
+					</th>
+					<th>
+						<label for="radakteur">Redakteur</label>
+					</th>
+					<th>
+						<label for="filternews">News</label>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<select id="journalist" name="journalist">
+							<option selected>Alle</option>
+							<option>Hans Wurst</option>
+							<option>Max Mustermann</option>
+							<option>Theo Retisch</option>
+							<option>Rainer Zufall</option>
+						</select>
+					</td>
+					<td>
+						<select id="redakteur" name="redakteur">
+							<option selected>Alle</option>
+							<option>Hans Wurst</option>
+							<option>Max Mustermann</option>
+							<option>Theo Retisch</option>
+							<option>Rainer Zufall</option>
+						</select>
+					</td>
+					<td>
+						<select id="filternews" name="news">
+							<option selected>Alle</option>
+							<option>09.03.2012</option>
+							<option>08.03.2012</option>
+							<option>07.03.2012</option>
+							<option>06.03.2012</option>
+						</select>
+					</td>
+				</tr>
+				</table>
+				</form>
+			</div>
+			</div>
+			<div id="rightheader">
+				<div id="login">
+				<form method="post" action="#">				
+				<table>
+				<tr>
+					<th>
+						<label for="user">Benutzername</label>
+					</th>
+					<th>
+						<label for="passwd">Passwort</label>
+					</th>
+					<th>
+					</th>
+					<th></th>
+				</tr>
+				<tr>
+					<td>
+						<input id="user" type="text" />
+					</td>
+					<td>
+						<input id="passwd" type="password" />
+					</td>
+					<td>
+						<a href="#">Passwort?</a>
+					</td>
+					<td>
+						<input type="submit" value="Login" />
+						<input type="hidden" name="next" value="{{ next }}" />
+					</td>
+				</tr>
+				</table>
+				</form>
+				
+				</div>
+				<div id="reg-social">
+				<div class="socialblock"></div>
+				<div class="socialblock"></div>
+				<div class="socialblock"></div>
+				<div class="socialblock"></div>
+				<div class="socialblock"></div>
+				<div class="socialblock"></div>
+				<div class="socialblock"></div>
+				<div class="socialblock"></div>
+				<div class="socialblock"></div>
+				<div class="socialblock"></div>
+				<div class="regtxt"><a href="#">Neu</a></div>
+				</div>
+			</div>
+		</div>
+		<div id="bodycont">
+		<div id="reg-form"></div>
+		<div id="news">
+		<div class="newsblock">
+			<div class="newstype">newstype</div>
+			<div class="newscontent">Newscontent</div>
+		</div>
+		<div class="newsblock">
+			<div class="newstype">newstype</div>
+			<div class="newscontent">Newscontent</div>
+		</div>
+		<div class="newsblock">
+			<div class="newstype">newstype</div>
+			<div class="newscontent">Newscontent</div>
+		</div>
+		<div class="newsblock">
+			<div class="newstype">newstype</div>
+			<div class="newscontent">Newscontent</div>
+		</div>
+		<div class="newsblock">	
+			<div class="newstype">newstype</div>
+			<div class="newscontent">Newscontent</div>
+		</div>	
+		<div class="newsblock">
+			<div class="newstype">newstype</div>
+			<div class="newscontent">Newscontent</div>
+		</div>
+		</div>	
+		</div>
+	</div>
+</div>
+</body>
+</html>

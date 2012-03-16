@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+	<div id="innerwrapper">
+		<div id="header">
+			<div id="leftheader">
+				<div id="logo"><img src="{% block logo %}{% endblock %}" /></div>
+				<div id="filter">
+				{% block filter %}
+				{% endblock %}
+			</div>
+			</div>
+			<div id="rightheader">
+				<div id="login">
+				{% block login %}
+				{% endblock %}
+				</div>
+				<div id="reg-social">
+				{% block reg-social %}
+				{% endblock %}
+				</div>
+			</div>
+		</div>
+		<div id="bodycont">
+		<div id="reg-form">{% block right-content %}{% endblock %}</div>
+		<div id="news">
+		{% block left-content %}
+		{% endblock %}
+		</div>	
+		</div>
+	</div>
+</div>
+</body>
+</html>

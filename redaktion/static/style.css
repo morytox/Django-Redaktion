@@ -1,0 +1,11 @@
+div.story 	{
+	border: 1px solid gray;
+	margin-bottom: 10px;
+}
+div.story h3 {
+	background-color: #DDD;
+}
+
+a {
+	display: block;
+}

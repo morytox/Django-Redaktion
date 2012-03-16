@@ -1,0 +1,20 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/style.css" />
+<body>
+<h1>Redaktionssystem</h1>
+<div>
+<a href="/published">Published Stories</a>
+<a href="/archive">Archived Stories</a>
+<a href="/draft">Story Drafts</a>
+</div>
+{% for story in storys %}
+<div class="story"><h2>{{story.titel}}</h2>
+<h3>Autor: {{story.journalist}} Redakteur: {{story.journalist.redakteur}}</h3>
+<p>{{story.inhalt}}</p></div>
+{% endfor %}
+{% for ad in ads %}
+<img src="{{ad.picture}}" alt="{{ad.name}}" width="150" height="100" title="{{ad.name}}"/>
+{% endfor %}
+</body>
+</html>

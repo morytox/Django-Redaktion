@@ -1,0 +1,218 @@
+{% extends "registration/registration_base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block logo %}FS93Nerds.png{% endblock %}
+
+{% block filter %}
+<form action="#">
+<table>
+<tr>
+	<th>
+		<label for="journalist">Journalist</label>
+	</th>
+	<th>
+		<label for="radakteur">Redakteur</label>
+	</th>
+	<th>
+		<label for="filternews">News</label>
+	</th>
+</tr>
+<tr>
+	<td>
+		<select id="journalist" name="journalist">
+			<option selected>Alle</option>
+			<option>Hans Wurst</option>
+			<option>Max Mustermann</option>
+			<option>Theo Retisch</option>
+			<option>Rainer Zufall</option>
+		</select>
+	</td>
+	<td>
+		<select id="redakteur" name="redakteur">
+			<option selected>Alle</option>
+			<option>Hans Wurst</option>
+			<option>Max Mustermann</option>
+			<option>Theo Retisch</option>
+			<option>Rainer Zufall</option>
+		</select>
+	</td>
+	<td>
+		<select id="filternews" name="news">
+			<option selected>Alle</option>
+			<option>09.03.2012</option>
+			<option>08.03.2012</option>
+			<option>07.03.2012</option>
+			<option>06.03.2012</option>
+		</select>
+	</td>
+</tr>
+</table>
+</form>
+{% endblock %}
+
+{% block login %}
+<form method="post" action="{% url django.contrib.auth.views.login %}">{% csrf_token %}
+<table>
+<tr>
+	<th>
+		{{ form.username.label_tag }}
+	</th>
+	<th>
+		{{ form.password.label_tag }}
+	</th>
+	<th>
+		{% if form.errors %}
+		<p>Your username and password didn't match. Please try again.</p>
+		{% endif %}
+	</th>
+	<th></th>
+</tr>
+<tr>
+	<td>
+		{{ form.username }}
+	</td>
+	<td>
+		{{ form.password }}
+	</td>
+	<td>
+		<a href="{% url auth_password_reset %}">Passwort?</a>
+	</td>
+	<td>
+		<input type="submit" value="Login" />
+		<input type="hidden" name="next" value="{{ next }}" />
+	</td>
+</tr>
+</table>
+</form>
+{% endblock %}
+
+{% block reg-social %}
+		<div class="socialblock"></div>
+		<div class="socialblock"></div>
+		<div class="socialblock"></div>
+		<div class="socialblock"></div>
+		<div class="socialblock"></div>
+		<div class="socialblock"></div>
+		<div class="regtxt"><a href="{% url registration_register %}">Neu</a></div>
+{% endblock %}
+
+{% block left-content %}
+<div class="newsblock">
+	<div class="newstype">newstype</div>
+	<div class="newscontent">Newscontent</div>
+</div>
+<div class="newsblock">
+	<div class="newstype">newstype</div>
+	<div class="newscontent">Newscontent</div>
+</div>
+<div class="newsblock">
+	<div class="newstype">newstype</div>
+	<div class="newscontent">Newscontent</div>
+</div>
+<div class="newsblock">
+	<div class="newstype">newstype</div>
+	<div class="newscontent">Newscontent</div>
+</div>
+<div class="newsblock">	
+	<div class="newstype">newstype</div>
+	<div class="newscontent">Newscontent</div>
+</div>	
+<div class="newsblock">
+	<div class="newstype">newstype</div>
+	<div class="newscontent">Newscontent</div>
+</div>
+{% endblock %}
+
+{% block right-content %}
+Registrieren<br />
+FS93Nerds ist und bleibt kostenlos.<br />
+<br />
+<table>
+<form method="post" action="#">{% csrf_token %}
+<tr>
+	<td>
+		<label for="vorname">Vorname:</label>	
+	</td>
+	<td>
+		<input id="vorname" type="text" />
+	</td>
+</tr>
+<tr>
+	<td>
+		<label for="nachname">Nachname:</label>	
+	</td>
+	<td>
+		<input id="nachname" type="text" />
+	</td>
+</tr>
+<tr>
+	<td>
+		<label for="eimail">Deine E-Mail Adresse:</label>	
+	</td>
+	<td>
+		<input id="email" type="email" />
+	</td>
+</tr>
+<tr>
+	<td>
+		<label for="emailagain">E-Mail nochmals eingeben::</label>	
+	</td>
+	<td>
+		<input id="emailagain" type="email" />
+	</td>
+</tr>
+<tr>
+	<td>
+		<label for="gender">Ich bin:</label>	
+	</td>
+	<td>
+		<select>
+			<option selected>Geschlecht Auswählen:</option>
+			<option>Männlich</option>
+			<option>Weiblich</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td>
+		<label for="gebdat">Geburtstag:</label>	
+	</td>
+	<td>
+		<select>
+			<option selected>Tag:</option>
+		</select>
+		<select>
+			<option selected>Monat:</option>
+		</select>
+		<select>
+			<option selected>Jahr:</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td>
+	</td>
+	<td>
+		<a href="#">Warum muss ich meinen Geburtstag angeben?</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	</td>
+	<td>
+		Wenn du auf „Registrieren“ klickst, akzeptierst du unsere <a href="#">Nutzungsbedingungen</a> und erklärst unsere <a href="#">Datenverwendungsrichtlinien</a> gelesen und verstanden zu haben.</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	</td>
+	<td>
+		<input id="Submit" type="submit" value="Anmelden" />
+	</td>
+</tr>
+
+
+
+{% endblock %}
+
